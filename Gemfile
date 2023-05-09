@@ -66,3 +66,7 @@ gem 'refinerycms-blog', ['~> 4.0', '>= 4.0.0']
 #  gem 'refinerycms-inquiries', ['~> 4.0', '>= 4.0.0']
 #  gem 'refinerycms-search', ['~> 4.0', '>= 4.0.0']
 #  gem 'refinerycms-page-images', ['~> 4.0', '>= 4.0.0']
+
+gem 'bootstrap', '~> 5.3.0.alpha3'
+gem 'bigdecimal', '1.3.0'
+gem 'refinerycms-products', path: 'vendor/extensions'

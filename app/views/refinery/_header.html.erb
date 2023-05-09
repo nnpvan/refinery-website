@@ -1,8 +1,8 @@
-<%= content_tag :div, id: "logo", itemscope: "",  itemtype: "http://schema.org/Organization" do %>
+<div class="brandname">
   <%= link_to refinery.root_path, itemprop: "url" do %>
     <%= Refinery::Core.site_name %>
   <% end %>
-<% end %>
+</div>
 
 <% cache [I18n.locale, 'main_menu', @page, Refinery::Page.fast_menu.map(&:updated_at).max] do %>
   <%=

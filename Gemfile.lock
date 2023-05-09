@@ -1,3 +1,10 @@
+PATH
+  remote: vendor/extensions
+  specs:
+    refinerycms-products (1.0)
+      acts_as_indexed (~> 0.8.0)
+      refinerycms-core (~> 4.0.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -48,11 +55,18 @@ GEM
     addressable (2.8.4)
       public_suffix (>= 2.0.2, < 6.0)
     arel (8.0.0)
+    autoprefixer-rails (10.4.13.0)
+      execjs (~> 2)
     awesome_nested_set (3.5.0)
       activerecord (>= 4.0.0, < 7.1)
     babosa (2.0.0)
     bcrypt (3.1.18)
+    bigdecimal (1.3.0)
     bindex (0.8.1)
+    bootstrap (5.3.0.alpha3)
+      autoprefixer-rails (>= 9.1.0)
+      popper_js (>= 2.11.7, < 3)
+      sassc-rails (>= 2.0.0)
     builder (3.2.4)
     byebug (11.1.3)
     capybara (3.39.0)
@@ -165,6 +179,7 @@ GEM
     nokogiri (1.14.3-arm64-darwin)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    popper_js (2.11.7)
     public_suffix (5.0.1)
     puma (3.12.6)
     racc (1.6.2)
@@ -302,6 +317,14 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    sassc (2.4.0)
+      ffi (~> 1.9)
+    sassc-rails (2.1.2)
+      railties (>= 4.0.0)
+      sassc (>= 2.0)
+      sprockets (> 3.0)
+      sprockets-rails
+      tilt
     selenium-webdriver (4.9.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
@@ -355,6 +378,8 @@ PLATFORMS
   arm64-darwin-22
 
 DEPENDENCIES
+  bigdecimal (= 1.3.0)
+  bootstrap (~> 5.3.0.alpha3)
   byebug
   capybara (>= 2.15)
   coffee-rails (~> 4.2)
@@ -366,6 +391,7 @@ DEPENDENCIES
   refinerycms-acts-as-indexed (~> 3.0, >= 3.0.0)
   refinerycms-authentication-devise (~> 2.0)
   refinerycms-blog (~> 4.0, >= 4.0.0)
+  refinerycms-products!
   refinerycms-wymeditor (~> 2.0, >= 2.0.0)
   sass-rails (~> 5.0)
   selenium-webdriver
