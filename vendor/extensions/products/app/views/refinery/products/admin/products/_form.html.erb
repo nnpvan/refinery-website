@@ -9,13 +9,6 @@
   </div>
 
   <div class='field'>
-    <%= render '/refinery/admin/wysiwyg',
-                :f => f,
-                :fields => [:description],
-                :object => "products/product" -%>
-  </div>
-
-  <div class='field'>
     <%= f.label :price -%>
     <%= f.number_field :price -%>
   </div>
@@ -27,6 +20,13 @@
                :field => :photo_id,
                :image => @product.photo,
                :toggle_image_display => false -%>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+              :f => f,
+              :fields => [:description],
+              :object => "products/product" -%>
   </div>
 
   <div class='field'>

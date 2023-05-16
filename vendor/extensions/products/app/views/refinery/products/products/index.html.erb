@@ -1,14 +1,21 @@
-<% content_for :body do %>
-  <ul id="products" class="grid__row">
-    <% @products.each do |product| %>
-      <li class="grid__column-2-4">
-        <%= link_to product.name, refinery.products_product_path(product) %>
-        <br>
-        S$<%= product.price %>
-        <%= image_fu product.photo, '200x200' %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
-
 <%= render '/refinery/content_page' %>
+
+<section id="body_content">
+    <section id="body">
+        <div id="products">
+            <% @products.each do |product| %> 
+                <div class="product">
+                    <div>
+                        <%= image_fu product.photo, "200x200", class: "image-align-left" %>  
+                    </div>
+                    <div>
+                        <h3><%=raw product.name %></h3>
+                        <p>S$<%=raw product.price %></p>
+                        <p><%=raw product.description %></p>
+                        <%= link_to "More information", refinery.products_product_path(product) %>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </section>
+</section>
