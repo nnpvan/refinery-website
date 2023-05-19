@@ -1,13 +1,13 @@
 <section id="body_content">
     <section id="body">
         <div id="product">
-            <%= image_fu @product.photo, "400x400", class: "image-align-left" %>
+            <%= image_fu @product.photo, "800x800", class: "image-align-left" %>
             <h1><%=raw @product.name %></h1>
             <p>S$<%=raw @product.price %></p>
             <p><%=raw @product.description %></p>
-            <%= link_to "Shop now", @product.link %>
-            <br>
-            <%= link_to "Back to Products", refinery.products_products_path %>
+            <%= link_to "Shop now", @product.link, class: "btn btn-info" %>
+            <br></br>
+            <%= link_to "Back to Products", refinery.products_products_path, class: "btn btn-dark" %>
         </div>
     </section>
 </section>

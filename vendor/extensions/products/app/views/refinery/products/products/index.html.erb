@@ -4,17 +4,21 @@
     <section id="body">
         <div id="products">
             <% @products.each do |product| %> 
-                <div class="product">
-                    <div>
-                        <%= image_fu product.photo, "200x200", class: "image-align-left" %>  
+                <%= link_to refinery.products_product_path(product) do %>
+                    <div class="product">
+                        <div class="image-container">
+                            <%= image_fu product.photo, "800x800", class: "image-align-left" %>  
+                        </div>
+                        <div>
+                            <h3><%=raw product.name %></h3>
+                            <% stripped_description = strip_tags(product.description) %>
+                            <% truncated_description = stripped_description.truncate(200, separator: ' ') %>
+                            <p class="description-truncate"><%= truncated_description %></p>
+                            <%= link_to "More information", refinery.products_product_path(product), class: "btn btn-info" %>
+                            <%= link_to "Shop now", product.link, class: "btn btn-info" %>
+                        </div>
                     </div>
-                    <div>
-                        <h3><%=raw product.name %></h3>
-                        <p>S$<%=raw product.price %></p>
-                        <p><%=raw product.description %></p>
-                        <%= link_to "More information", refinery.products_product_path(product) %>
-                    </div>
-                </div>
+                <% end %>
             <% end %>
         </div>
     </section>
