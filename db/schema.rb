@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20230508102016) do
+ActiveRecord::Schema.define(version: 20230523020203) do
 
   create_table "refinery_authentication_devise_roles", force: :cascade do |t|
     t.string "title"
@@ -121,6 +121,26 @@ ActiveRecord::Schema.define(version: 20230508102016) do
     t.index ["access_count"], name: "index_refinery_blog_posts_on_access_count"
     t.index ["id"], name: "index_refinery_blog_posts_on_id"
     t.index ["slug"], name: "index_refinery_blog_posts_on_slug"
+  end
+
+  create_table "refinery_image_page_translations", force: :cascade do |t|
+    t.integer "refinery_image_page_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "caption"
+    t.index ["locale"], name: "index_refinery_image_page_translations_on_locale"
+    t.index ["refinery_image_page_id"], name: "index_186c9a170a0ab319c675aa80880ce155d8f47244"
+  end
+
+  create_table "refinery_image_pages", force: :cascade do |t|
+    t.integer "image_id"
+    t.integer "page_id"
+    t.integer "position"
+    t.text "caption"
+    t.string "page_type", default: "page"
+    t.index ["image_id"], name: "index_refinery_image_pages_on_image_id"
+    t.index ["page_id"], name: "index_refinery_image_pages_on_page_id"
   end
 
   create_table "refinery_image_translations", force: :cascade do |t|

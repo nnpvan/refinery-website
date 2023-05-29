@@ -272,6 +272,10 @@ GEM
       globalize (>= 5.1.0.beta1, < 5.2)
       refinerycms-core (= 4.0.3)
       refinerycms-dragonfly (~> 1.0)
+    refinerycms-page-images (4.0.0)
+      decorators (~> 2.0)
+      globalize (~> 5.1.0)
+      refinerycms-pages (~> 4.0, >= 4.0.0)
     refinerycms-pages (4.0.3)
       activemodel-serializers-xml (~> 1.0, >= 1.0.1)
       awesome_nested_set (~> 3.1, >= 3.1.0)
@@ -391,6 +395,7 @@ DEPENDENCIES
   refinerycms-acts-as-indexed (~> 3.0, >= 3.0.0)
   refinerycms-authentication-devise (~> 2.0)
   refinerycms-blog (~> 4.0, >= 4.0.0)
+  refinerycms-page-images (~> 4.0.0)
   refinerycms-products!
   refinerycms-wymeditor (~> 2.0, >= 2.0.0)
   sass-rails (~> 5.0)
